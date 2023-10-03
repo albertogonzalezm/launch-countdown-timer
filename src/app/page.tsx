@@ -30,31 +30,33 @@ export default function Home() {
 
   return (
     <main className="h-[75%]">
-      <h1>{"WE'RE LAUNCHING SOON"}</h1>
-      <div id="countdown" className="flex items-center justify-center h-full">
-        <div id="days" className="m-8 font-bold">
-          <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-            {days}
+      <div className="flex flex-col justify-center items-center h-full">
+        <h1 className="text-white">{"WE'RE LAUNCHING SOON"}</h1>
+        <div id="countdown" className="flex items-center justify-center">
+          <div id="days" className="m-8 font-bold">
+            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
+              {days}
+            </div>
+            <h2 className="text-[#8486a9]">DAYS</h2>
           </div>
-          <h2 className="text-[#8486a9]">DAYS</h2>
-        </div>
-        <div id="hours" className="m-8 font-bold">
-          <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-            {hours}
+          <div id="hours" className="m-8 font-bold">
+            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
+              {hours}
+            </div>
+            <h2 className="text-[#8486a9]">HOURS</h2>
           </div>
-          <h2 className="text-[#8486a9]">HOURS</h2>
-        </div>
-        <div id="minutes" className="m-8 font-bold">
-          <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-            {minutes}
+          <div id="minutes" className="m-8 font-bold">
+            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
+              {minutes}
+            </div>
+            <h2 className="text-[#8486a9]">MINUTES</h2>
           </div>
-          <h2 className="text-[#8486a9]">MINUTES</h2>
-        </div>
-        <div id="seconds" className="m-8 font-bold">
-          <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-            {seconds}
+          <div id="seconds" className="m-8 font-bold">
+            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
+              {seconds}
+            </div>
+            <h2 className="text-[#8486a9]">SECONDS</h2>
           </div>
-          <h2 className="text-[#8486a9]">SECONDS</h2>
         </div>
       </div>
     </main>
