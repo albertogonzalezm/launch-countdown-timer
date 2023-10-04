@@ -2,11 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  color: #8486a9;
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+* {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  height: 100vh;
+  min-width: 375px;
+  background-image: url("/bg-stars.svg");
+  background-color: #1e1f29;
+}
+
+main {
+  height: 75%;
+}
+
+#number {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fb6087;
-  color: #ffffff;
-  color: #343650;
-  color: #1e1f29;
-  color: #191a24; 
-*/
+  margin-bottom: 25%;
+  background-color: #343650;
+  border-radius: 15px;
+  box-shadow: 0 12px 0 #191a24;
+}
+
+h1,
+h2 {
+  letter-spacing: 8px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+h2 {
+  color: #8486a9;
+  font-size: 14px;
+}
+
+#countdown {
+  width: 100%;
+  min-width: 375px;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  width: 20%;
+  max-width: 144px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}

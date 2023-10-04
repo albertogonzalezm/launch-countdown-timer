@@ -1,8 +1,3 @@
-import Image from "next/image";
-import facebook from "../../public/icon-facebook.svg";
-import instagram from "../../public/icon-instagram.svg";
-import pinterest from "../../public/icon-pinterest.svg";
-
 export default function Footer() {
   return (
     <footer className="h-[25%] bg-[url(/pattern-hills.svg)] bg-no-repeat bg-cover">

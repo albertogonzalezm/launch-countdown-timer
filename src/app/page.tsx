@@ -29,33 +29,26 @@ export default function Home() {
   });
 
   return (
-    <main className="h-[75%]">
-      <div className="flex flex-col justify-center items-center h-full">
-        <h1 className="text-white">{"WE'RE LAUNCHING SOON"}</h1>
-        <div id="countdown" className="flex items-center justify-center">
-          <div id="days" className="m-8 font-bold">
-            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-              {days}
-            </div>
-            <h2 className="text-[#8486a9]">DAYS</h2>
+    <main>
+      <div className="h-full flex flex-col justify-center items-center">
+        <h1>{"WE'RE LAUNCHING SOON"}</h1>
+
+        <div id="countdown">
+          <div id="days" className="time">
+            <div id="number">{days < 10 ? "0" + days : days}</div>
+            <h2>DAYS</h2>
           </div>
-          <div id="hours" className="m-8 font-bold">
-            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-              {hours}
-            </div>
-            <h2 className="text-[#8486a9]">HOURS</h2>
+          <div id="hours" className="time">
+            <div id="number">{hours < 10 ? "0" + hours : hours}</div>
+            <h2>HOURS</h2>
           </div>
-          <div id="minutes" className="m-8 font-bold">
-            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-              {minutes}
-            </div>
-            <h2 className="text-[#8486a9]">MINUTES</h2>
+          <div id="minutes" className="time">
+            <div id="number">{minutes < 10 ? "0" + minutes : minutes}</div>
+            <h2>MINUTES</h2>
           </div>
-          <div id="seconds" className="m-8 font-bold">
-            <div id="number" className="text-7xl text-[#fb6087] text-center bg-[#343650]">
-              {seconds}
-            </div>
-            <h2 className="text-[#8486a9]">SECONDS</h2>
+          <div id="seconds" className="time">
+            <div id="number">{seconds < 10 ? "0" + seconds : seconds}</div>
+            <h2>SECONDS</h2>
           </div>
         </div>
       </div>

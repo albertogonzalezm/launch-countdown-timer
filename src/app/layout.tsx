@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="h-screen bg-[url(/bg-stars.svg)] bg-[#1e1f29] min-w-[375px]">
+      <body>
         {children}
         <Footer />
       </body>

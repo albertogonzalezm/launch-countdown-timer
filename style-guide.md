@@ -29,7 +29,7 @@ The designs were created to the following widths:
 
 ### Font
 
-- Family: [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)
+- Family: [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)    
 - Weights: 700
 
 ## Icons
