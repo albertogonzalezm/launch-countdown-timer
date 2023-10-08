@@ -2,52 +2,48 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [days, setDays] = useState(8);
+  const countDownDate = new Date("12-31-2023").getTime();
+  const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(1);
-  const [seconds, setSeconds] = useState(10);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
   useEffect(() => {
-    if (days > 0) {
+    var today = new Date().getTime();
+    var dist = countDownDate - today;
+    const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+    const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((dist % (1000 * 60)) / 1000);
+    if (days >= 0) {
       setTimeout(() => {
-        setSeconds(seconds - 1);
-        if (seconds <= 0) {
-          setSeconds(59);
-          setMinutes(minutes - 1);
-        }
-
-        if (minutes <= 0 && seconds <= 0) {
-          setMinutes(59);
-          setHours(hours - 1);
-        }
-
-        if (minutes <= 0 && seconds <= 0 && hours <= 0) {
-          setHours(23);
-          setDays(days - 1);
-        }
+        setDays(d);
+        setHours(h);
+        setMinutes(m);
+        setSeconds(s);
       }, 1000);
     }
-  });
+  }, [countDownDate, days, hours, minutes, seconds]);
 
   return (
     <main>
       <div className="h-full flex flex-col justify-center items-center">
         <h1>{"WE'RE LAUNCHING SOON"}</h1>
-
         <div id="countdown">
           <div id="days" className="time">
-            <div id="number">{days < 10 ? "0" + days : days}</div>
+            <p id="number">{days}</p>
             <h2>DAYS</h2>
           </div>
           <div id="hours" className="time">
-            <div id="number">{hours < 10 ? "0" + hours : hours}</div>
+            <p id="number">{hours}</p>
             <h2>HOURS</h2>
           </div>
           <div id="minutes" className="time">
-            <div id="number">{minutes < 10 ? "0" + minutes : minutes}</div>
+            <p id="number">{minutes}</p>
             <h2>MINUTES</h2>
           </div>
           <div id="seconds" className="time">
-            <div id="number">{seconds < 10 ? "0" + seconds : seconds}</div>
+            <p id="number">{seconds}</p>
             <h2>SECONDS</h2>
           </div>
         </div>

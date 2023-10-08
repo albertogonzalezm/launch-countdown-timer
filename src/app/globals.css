@@ -21,7 +21,10 @@ main {
 }
 
 #number {
-  width: 100%;
+  width: 20vw;
+  height: 20vw;
+  max-width: 144px;
+  max-height: 144px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,22 +32,27 @@ main {
   margin-bottom: 25%;
   background-color: #343650;
   border-radius: 15px;
+  font-size: 80px;
   box-shadow: 0 12px 0 #191a24;
 }
 
 h1,
 h2 {
-  letter-spacing: 8px;
+  margin-left: 5px;
+  letter-spacing: 5px;
+  text-align: center;
 }
 
 h1 {
   color: #fff;
-  font-size: 24px;
+  font-size: 30px;
+  position: relative;
+  top: -80px;
 }
 
 h2 {
   color: #8486a9;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #countdown {
@@ -62,4 +70,26 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin: 2%;
+}
+
+@media (width<720px) {
+  #number {
+    font-size: 10vw;
+  }
+
+  h1,
+  h2 {
+    margin-left: 5px;
+    letter-spacing: 5px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 4vw;
+  }
+
+  h2 {
+    color: #8486a9;
+    font-size: 2vw;
+  }
 }
